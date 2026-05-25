@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Learnit </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+header {
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 40px;
+  color: #623f27;
+  text-decoration: none;
+}
+.search-wrap input {
+  width: 100%;
+  max-width: 800px;
+  padding: 6px;
+}
+nav a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+nav a:hover {
+  background: #f5f5f5;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  gap: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-wrap input {
+  padding: 6px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  background: #f5f5f5;
+  border: 1px solid #dddddd;
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  min-width: 180px;
+  padding: 5px 0;
+  z-index: 1000;
+}
+
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+
+
+.submenu {
+  position: relative;
+}
+.submenu-items {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: white;
+  border: 1px solid #ccc;
+  min-width: 180px;
+}
+
+
+.submenu:hover .submenu-items {
+  display: block;
+}
+
+
+.submenu-items a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  white-space: nowrap;
+}
+
+.submenu-items a:hover {
+  background: #f5f5f5;
+}
+
+.welcome-section {
+  background: #f9f0e7;
+  padding: 50px 20px;
+}
+.welcome-text {
+  max-width: 550px;
+}
+
+.welcome-text h1 {
+  font-size: 50px;
+  color: #623f27;
+  margin-bottom: 15px;
+}
+
+.welcome-text p {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.welcome-search {
+  display: flex;
+  border: 2px solid #623f27;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 500px;
+}
+
+.welcome-search input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  outline: none;
+}
+
+
+.welcome-search button {
+  background: #623f27;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.welcome-image img {
+  max-width: 400px;
+}
+
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1000px;
+  margin: 0 auto;   
+  padding: 0 20px;  
+}
+
+.trending {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+
+
+.trending-title h2 {
+  font-size: 22px;
+}
+
+.trending-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #f9f0e7;
+  padding-bottom: 8px;
+}
+
+.cards {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: white;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.card {
+  color: #000000;
+    text-decoration: none; 
+}
+.card-text {
+  padding: 10px;
+  font-size: 14px;
+}
+
+
+.about-section {
+  background: #f9f0e7;
+  padding: 50px 20px;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;   
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.about-text {
+  max-width: 550px;
+  padding: 50px 20px;
+}
+
+.about-text p {
+  font-size: 18px;
+  color: #623f27;
+  margin-bottom: 15px;
+}
+
+.about-text h1 {
+  font-size: 50px;
+  color: #623f27;
+  margin-bottom: 15px;
+}
+
+.about-features {
+  display: grid;
+  gap: 15px;
+}
+
+.feature {
+  font-size: 25px;
+  font-weight: 500;
+  padding: 16px 20px;
+  background: white;
+  border-radius: 12px;
+  color: #623f27;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+}
+
+footer {
+  background: #f9f0e7;
+  color: #623f27;
+  margin-top: 48px;
+  padding: 40px 20px;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+    footer h1 { 
+	color: #623f27; 
+	font-size: 14px; 
+	font-weight: 600;
+	margin-bottom: 12px;
+	}
+  
+  footer a { 
+  display: block; 
+  color: #623f27; 
+  font-size: 13px;
+  text-decoration: none; 
+  margin-bottom: 6px; }
+  
+footer a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+	.footer-bottom {
+      max-width: 1100px;
+      margin: 24px auto 0;
+      padding-top: 20px;
+      font-size: 12px;
+      color: #81c784;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+.welcome-text .fine {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #7a5a44;
+}
+</style>
+</head>
+<body>
+
+
+  <header>
+    <div class="container">
+
+	<a class="logo" href="#">
+	<img src="logo.png" alt="Learnit logo">
+	Learnit
+	</a>
+
+      <div class="search-wrap">
+        <input type="text" placeholder="Search articles..." />
+      </div>
+
+      <nav>
+       
+
+        <div class="dropdown">
+          <button class="dropdown-btn" >
+            Categories
+          </button>
+          <div class="dropdown-menu" id="categoryMenu">
+		  
+			<div class="submenu">
+				<a href="#">Arts and Crafts</a>
+
+			<div class="submenu-items">
+				<a href="slime.html">How to make slime</a>
+				</div>
+			</div>
+			
+			<div class="submenu">			
+            <a href="#"> Hobbies </a>
+					<div class="submenu-items">
+				<a href="basketball.html">How to pump a basketball</a>
+				</div>
+			</div>
+			
+            <a href="#"> Pets and Animals </a>
+            <a href="#"> Health and Fitness</a>
+            <a href="#"> Computer and Electronics</a>
+            <a href="#"> Education </a>
+			
+						<div class="submenu">
+            <a href="#"> Personal care </a>
+						<div class="submenu-items">
+				<a href="shoe.html">How to tie shoelaces</a>
+				</div>
+			
+			</div>
+            <a href="#"> Home and Garden </a>
+			<a href="#"> Finance and Business  </a>
+            <a href="#"> Cars and vehicles </a>
+          </div>
+        </div>
+		
+		<a href="about.html">About Us</a>
+		<a href="donation.html">Donation</a>
+      </nav>
+
+    </div>
+  </header>
+
+<div class="welcome-section">
+  <div class="welcome-container">
+    
+    <div class="welcome-text">
+      <h1>Welcome to Learnit</h1>
+      <p>Finally, tutorials that don’t suck</p>
+
+      <div class="welcome-search">
+		  <input type="text" placeholder="What will you learn today? " />
+        <button>Search</button>
+      </div>
+	  
+	  
+	   <p class="fine">
+     This search bar does not work, you can find all our articles in the "Trending " section
+    </p>
+    </div>
+
+    <div class="welcome-image">
+      <img src="logo.png" alt="Logo">
+	</div>
+  </div>
+	</div>
+
+  
+  <div class="trending">
+  <div class="trending-title">
+    <h2>Trending Now</h2>
+  </div>
+
+  <div class="cards">
+
+<a href="slime.html" class="card">
+  <img src="slime.png">
+  <div class="card-text">
+    How to Make Slime
+  </div>
+</a>
+
+<a href="basketball.html" class="card">
+  <img src="basketball.jpg">
+  <div class="card-text">
+How to Pump a Basketball
+  </div>
+</a>
+
+<a href="shoe.html" class="card">
+  <img src="shoe.webp">
+  <div class="card-text">
+How to tie shoelaces
+  </div>
+  </a>
+</div> 
+
+</div> 
+
+
+
+<div class="about-section">
+  <div class="about-container">
+   
+	    <div class="about-text">
+	 <h1>About Us</h1>
+      <p>Learnit is an educational content platform focused on providing simple step-bystep "How-to" guides for people</p>
+	  <p>Users can upload suggestions for guides for this website. Moderators will review the guides for safety, accuracy, and age appropriateness </p>
+    </div>
+
+	<div class="about-features">
+	<div class="feature">📚 3+ Guides </div>
+	<div class="feature">🎨 Hand rotoscoped </div>
+	<div class="feature">🛡️ All safe and appropriate</div>
+</div>
+  </div>
+	</div>
+
+
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h1>Company</h1>
+	  	  <a href="about.html">About</a>
+      <a href="#"><s>Team</s></a>
+      <a href="#"><s>Social Media</s></a>
+      <a href="#"><s>Your Account</s></a>
+    </div>
+    <div>
+      <h1>Explore</h1>
+      <a href="#"><s>Trending</s></a>
+      <a href="#"><s>Write a Guide</s></a>
+      <a href="#"><s>How To Use</s></a>
+      <a href="#"><s>FAQs</s></a>
+    </div>
+    <div>
+      <h1>Help &amp; Support</h1>
+	  	  <a href="contact.html">Contact Support</a>
+      <a href="#"><s>Report a Guide</s></a>
+      <a href="#"><s>Privacy policy</s></a>
+      <a href="#"><s>Terms of use</s></a>
+    </div>
+  </div>
+
+</footer>
+ 
+
+</body>
+
+
+
+</html>

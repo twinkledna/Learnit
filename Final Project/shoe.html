@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Learnit </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+button,
+input,
+a {
+  font-family: inherit;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+header {
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 40px;
+  color: #623f27;
+  text-decoration: none;
+}
+.search-wrap {
+
+  display: flex;
+  justify-content: center;
+}
+.search-wrap input {
+  width: 100%;
+  max-width: 800px;
+  padding: 6px 10px;
+}
+nav a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+nav a:hover {
+  background: #f5f5f5;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  gap: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-wrap input {
+  padding: 6px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  background: #f5f5f5;
+  border: 1px solid #dddddd;
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  min-width: 180px;
+  padding: 5px 0;
+  z-index: 1000;
+}
+
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+
+
+.submenu {
+  position: relative;
+}
+.submenu-items {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: white;
+  border: 1px solid #ccc;
+  min-width: 180px;
+}
+
+
+.submenu:hover .submenu-items {
+  display: block;
+}
+
+
+.submenu-items a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  white-space: nowrap;
+}
+
+.submenu-items a:hover {
+  background: #f5f5f5;
+}
+
+.about-features {
+  display: grid;
+  gap: 15px;
+}
+
+.feature {
+  font-size: 25px;
+  font-weight: 500;
+  padding: 16px 20px;
+  background: white;
+  border-radius: 12px;
+  color: #623f27;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+}
+
+footer {
+  background: #FFFFFF;
+  color: #FFFFFF;
+  margin-top: 48px;
+  padding: 40px 20px;
+    position: relative;
+    z-index: 9999;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+    footer h1 { 
+	color: #623f27; 
+	font-size: 14px; 
+	font-weight: 600;
+	margin-bottom: 12px;
+	}
+  
+  footer a { 
+  display: block; 
+  color: #623f27; 
+  font-size: 13px;
+  text-decoration: none; 
+  margin-bottom: 6px; }
+  
+footer a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+	.footer-bottom {
+      max-width: 1100px;
+      margin: 24px auto 0;
+      padding-top: 20px;
+      font-size: 12px;
+      color: #81c784;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+	
+
+
+body {
+  background-color: #f9f0e7; 
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+
+.article-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+}
+h1 {
+  font-size: 32px;
+  color: #623f27;
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: 18px;
+  color: #623f27;
+  margin-bottom: 10px;
+}
+
+.intro {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+.step-card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+
+
+.step-card h2 {
+  font-size: 26px;
+  color: #623f27;
+  margin-bottom: 10px;
+}
+
+.step-card img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  font-size: 16px;
+}
+
+
+.ads {
+  position: fixed;
+
+}
+
+.ad1 {
+  right: 150px;
+  top: 150px;
+}
+
+.ad2 {
+  right: 150px;
+  top: 410px;
+}
+
+.ad3 {
+  right: 150px;
+  top: 670px;
+}
+
+.ad4 {
+  left: 150px;
+  top: 150px;
+}
+
+.ad5 {
+  left: 150px;
+  top: 760px;
+}
+
+
+
+.ads img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+
+.comments-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+
+.question-box {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.question-tag {
+  display: inline-block;
+  background: #623f27;
+  border-radius: 6px;
+  padding: 4px 10px;
+  margin-bottom: 15px;
+}
+
+.question-tag p {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.question-box h2 {
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.answer-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.answer-box img {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.answer-text {
+  flex: 1;
+}
+
+.answer-text h3 {
+  color: #000000;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.answer-text p {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.vote-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.vote-row p {
+  font-size: 14px;
+  color: #777;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vote-row b {
+  background: #e5e5e5;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #666;
+}
+</style>
+</head>
+<body>
+
+
+  <header>
+    <div class="container">
+
+<a class="logo" href="index.html">
+	<img src="logo.png" alt="Learnit logo">
+	Learnit
+	</a>
+
+      <div class="search-wrap">
+        <input type="text" placeholder="Search articles..." />
+      </div>
+
+      <nav>
+       
+
+        <div class="dropdown">
+          <button class="dropdown-btn" >
+            Categories
+          </button>
+          <div class="dropdown-menu" id="categoryMenu">
+		  
+			<div class="submenu">
+				<a href="#">Arts and Crafts</a>
+
+			<div class="submenu-items">
+				<a href="slime.html">How to make slime</a>
+				</div>
+			</div>
+			
+			<div class="submenu">			
+            <a href="#"> Hobbies </a>
+					<div class="submenu-items">
+				<a href="basketball.html">How to pump a basketball</a>
+				</div>
+			</div>
+			
+            <a href="#"> Pets and Animals </a>
+            <a href="#"> Health and Fitness</a>
+            <a href="#"> Computer and Electronics</a>
+            <a href="#"> Education </a>
+			
+						<div class="submenu">
+            <a href="#"> Personal care </a>
+						<div class="submenu-items">
+				<a href="shoe.html">How to tie shoelaces</a>
+				</div>
+			
+			</div>
+            <a href="#"> Home and Garden </a>
+			<a href="#"> Finance and Business  </a>
+            <a href="#"> Cars and vehicles </a>
+          </div>
+        </div>
+		
+		<a href="about.html">About Us</a>
+		<a href="donation.html">Donation</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+<div class="article-container">
+
+  <div class="step-card">
+  <h1>How to tie shoelaces</h1>
+  <h2>By Li</h2>
+  <p>There are many ways to tie your shoes, and some may be easier than others. Whether you are trying to teach a child how to tie their shoes, or you're looking for a new technique, all you’ll need is a pair of patient hands and your favorite pair of shoes. This article will teach you how to tie your shoelaces using the "bunny ear" method</p>
+</div>
+
+  <div class="step-card">
+  <h2>Materials</h2>
+  <p>• Shoe</p>
+<p>• Shoe Laces</p>
+
+</div>
+  <div class="step-card">
+    <h2>Step 1:</h2>
+	  <div class="step-img">
+    <img src="hoppers.gif">
+	</div>
+    <p><b>Cross the laces</b></p>
+	
+ <p>Take one lace over the other and pull tight.<p>
+</p>
+  </div>
+
+  <div class="step-card">
+    <h2>Step 2:</h2>
+    <img src="placeholder.png">
+       <p><b>Cross the laces</b></p>
+	
+ <p>Take one lace over the other and pull tight.<p>
+</p>
+  </div>
+
+  <div class="step-card">
+    <h2>Step 3:</h2>
+    <img src="placeholder.png">
+        <p><b>Make one loop (“bunny ear”)
+
+</b></p>
+	
+ <p>Fold one lace back on itself to form a loop. Hold it between your thumb and finger.
+
+<p>
+</p>
+  </div>
+  
+    <div class="step-card">
+    <h2>Step 4:</h2>
+    <img src="placeholder.png">
+        <p><b>Push through to form a second loop</b></p>
+	
+ <p>Tuck a bit of the wrapped lace through the hole behind the first loop to make another loop.<p>
+</p>
+  </div>
+    
+    <div class="step-card">
+    <h2>Step 5:</h2>
+    <img src="placeholder.png">
+        <p><b>Pull both loops tight
+
+</b></p>
+	
+ <p>Grab both loops and pull outward until the knot is snug.
+<p>
+</p>
+  </div>
+
+</div>
+</div>
+
+
+<<div class="ads ad1">
+  <a href="ad.html">
+    <img src="bmo.jpg" alt="ad">
+  </a>
+</div>
+
+<div class="ads ad2">
+  <a href="ad.html">
+    <img src="fortis.jpg" alt="ad">
+  </a>
+</div>
+<div class="ads ad3">
+  <a href="ad.html">
+    <img src="hydro.png" alt="ad">
+  </a>
+</div>
+
+<div class="ads ad4">
+  <a href="ad.html">
+    <img src="depot.jpg" alt="ad">
+  </a>
+</div>
+<div class="ads ad5">
+  <a href="ad.html">
+    <img src="port.png" alt="ad">
+  </a>
+</div>
+
+
+<div class="comments-section">
+
+  <div class="step-card">
+    <h1>Expert Q&amp;A</h1>
+
+    <div class="question-box">
+
+      <div class="question-tag">
+        <p>Question</p>
+      </div>
+
+      <h2>What's the best way to store slime?</h2>
+
+      <div class="answer-box">
+
+        <img src="placeholder.png">
+
+        <div class="answer-text">
+          <h3>Community Answer</h3>
+
+          <p>
+            Slimes tend to expand after play, so you can store any leftover portions in an airtight container, like Tupperware or a Ziploc bag. That prevents air exposure, which dries it out. Once the slime settles back to its original size after a few days, you can return the leftovers to the original jar it came it. Always keep it sealed to avoid drying out. If it does harden, a bit of vinegar can help revive it.
+          </p>
+
+<div class="vote-row">
+  <p>Helpful <b>67</b></p>
+  <p>Not Helpful <b>2</b></p>
+</div>
+          
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="question-box">
+
+      <div class="question-tag">
+        <p>Question</p>
+      </div>
+
+      <h2>Can I make slime without glue?</h2>
+
+      <div class="answer-box">
+
+    <img src="placeholder.png">
+
+     <div class="answer-text">
+          <h3>Community Answer</h3>
+
+          <p>
+            That's a great question
+          </p>
+
+<div class="vote-row">
+  <p>Helpful <b>2</b></p>
+  <p>Not Helpful <b>59</b></p>
+</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h1>Company</h1>
+	  	  <a href="about.html">About</a>
+      <a href="#"><s>Team</s></a>
+      <a href="#"><s>Social Media</s></a>
+      <a href="#"><s>Your Account</s></a>
+    </div>
+    <div>
+      <h1>Explore</h1>
+      <a href="#"><s>Trending</s></a>
+      <a href="#"><s>Write a Guide</s></a>
+      <a href="#"><s>How To Use</s></a>
+      <a href="#"><s>FAQs</s></a>
+    </div>
+    <div>
+      <h1>Help &amp; Support</h1>
+	  	  <a href="contact.html">Contact Support</a>
+      <a href="#"><s>Report a Guide</s></a>
+      <a href="#"><s>Privacy policy</s></a>
+      <a href="#"><s>Terms of use</s></a>
+    </div>
+  </div>
+
+</footer>
+
+</body>
+</html>
