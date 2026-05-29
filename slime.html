@@ -1,43 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Learnit </title>
-
+<title>Learnit</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
-
 <style>
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-* {
   font-family: 'Open Sans', sans-serif;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  background-color: #f9f0e7;
 }
 
-button,
-input,
-a {
-  font-family: inherit;
-}
-
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.logo img {
-  width: 50px;
-  height: 50px;
-}
+/* ── Header ── */
 header {
   background: white;
   border-bottom: 1px solid #e0e0e0;
@@ -46,31 +25,6 @@ header {
   z-index: 100;
 }
 
-.logo {
-  font-size: 40px;
-  color: #623f27;
-  text-decoration: none;
-}
-.search-wrap {
-
-  display: flex;
-  justify-content: center;
-}
-.search-wrap input {
-  width: 100%;
-  max-width: 800px;
-  padding: 6px 10px;
-}
-nav a {
-  text-decoration: none;
-  font-size: 14px;
-  color: #333;
-  padding: 8px 10px;
-  border-radius: 6px;
-}
-nav a:hover {
-  background: #f5f5f5;
-}
 .container {
   display: flex;
   align-items: center;
@@ -79,6 +33,34 @@ nav a:hover {
   margin: 0 auto;
   padding: 10px 20px;
   gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 40px;
+  color: #623f27;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.search-wrap {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.search-wrap input {
+  width: 100%;
+  max-width: 800px;
+  padding: 6px 10px;
 }
 
 nav {
@@ -87,8 +69,16 @@ nav {
   gap: 15px;
 }
 
-.search-wrap input {
-  padding: 6px;
+nav a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background: #f5f5f5;
 }
 
 .dropdown {
@@ -99,7 +89,6 @@ nav {
 .dropdown-btn {
   background: #f5f5f5;
   border: 1px solid #dddddd;
-  font-family: inherit;
   font-size: 14px;
   color: #333;
   cursor: pointer;
@@ -120,13 +109,8 @@ nav {
   z-index: 1000;
 }
 
-
 .dropdown:hover .dropdown-menu {
   display: block;
-}
-
-.dropdown-menu a:hover {
-  background: #f5f5f5;
 }
 
 .dropdown-menu a {
@@ -138,11 +122,14 @@ nav {
   white-space: nowrap;
 }
 
-
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
 
 .submenu {
   position: relative;
 }
+
 .submenu-items {
   display: none;
   position: absolute;
@@ -153,11 +140,9 @@ nav {
   min-width: 180px;
 }
 
-
 .submenu:hover .submenu-items {
   display: block;
 }
-
 
 .submenu-items a {
   display: block;
@@ -171,100 +156,24 @@ nav {
   background: #f5f5f5;
 }
 
-.about-features {
-  display: grid;
-  gap: 15px;
-}
-
-.feature {
-  font-size: 25px;
-  font-weight: 500;
-  padding: 16px 20px;
-  background: white;
-  border-radius: 12px;
-  color: #623f27;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
-}
-
-footer {
-  background: #FFFFFF;
-  color: #FFFFFF;
-  margin-top: 48px;
-  padding: 40px 20px;
-    position: relative;
-    z-index: 9999;
-}
-
-.footer-inner {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 32px;
-}
-    footer h1 { 
-	color: #623f27; 
-	font-size: 14px; 
-	font-weight: 600;
-	margin-bottom: 12px;
-	}
-  
-  footer a { 
-  display: block; 
-  color: #623f27; 
-  font-size: 13px;
-  text-decoration: none; 
-  margin-bottom: 6px; }
-  
-footer a:hover {
-  color: #000;
-  text-decoration: underline;
-}
-	.footer-bottom {
-      max-width: 1100px;
-      margin: 24px auto 0;
-      padding-top: 20px;
-      font-size: 12px;
-      color: #81c784;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-	
-
-
-body {
-  background-color: #f9f0e7; 
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-}
-
-
+/* ── Article ── */
 .article-container {
   max-width: 800px;
   margin: 40px auto;
   padding: 30px;
   border-radius: 12px;
 }
+
 h1 {
   font-size: 32px;
   color: #623f27;
   margin-bottom: 10px;
 }
+
 h2 {
   font-size: 18px;
   color: #623f27;
   margin-bottom: 10px;
-}
-
-.intro {
-  background: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 12px;
 }
 
 .step-card {
@@ -273,7 +182,6 @@ h2 {
   margin-bottom: 20px;
   border-radius: 12px;
 }
-
 
 .step-card h2 {
   font-size: 26px;
@@ -292,53 +200,13 @@ h2 {
   font-size: 16px;
 }
 
-
-.ads {
-  position: fixed;
-
-}
-
-.ad1 {
-  right: 150px;
-  top: 150px;
-}
-
-.ad2 {
-  right: 150px;
-  top: 410px;
-}
-
-.ad3 {
-  right: 150px;
-  top: 670px;
-}
-
-.ad4 {
-  left: 150px;
-  top: 150px;
-}
-
-.ad5 {
-  left: 150px;
-  top: 760px;
-}
-
-
-
-.ads img {
-  width: 300px;
-  height: auto;
-  border-radius: 8px;
-}
-
-
+/* ── Comments ── */
 .comments-section {
   max-width: 800px;
   margin: 40px auto;
   padding: 30px;
   border-radius: 12px;
 }
-
 
 .question-box {
   margin-top: 30px;
@@ -362,7 +230,7 @@ h2 {
 
 .question-box h2 {
   font-size: 20px;
-  color: #000000;
+  color: #000;
   margin-bottom: 20px;
 }
 
@@ -385,7 +253,7 @@ h2 {
 }
 
 .answer-text h3 {
-  color: #000000;
+  color: #000;
   font-size: 16px;
   margin-bottom: 12px;
 }
@@ -417,242 +285,288 @@ h2 {
   font-weight: 600;
   color: #666;
 }
+
+/* ── Footer ── */
+footer {
+  background: #fff;
+  margin-top: 48px;
+  padding: 40px 20px;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+footer h1 {
+  color: #623f27;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+footer a {
+  display: block;
+  color: #623f27;
+  font-size: 13px;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+
+footer a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  max-width: 1000px;
+  margin: 24px auto 0;
+  padding-top: 20px;
+  font-size: 12px;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ── Mobile ── */
+@media (max-width: 700px) {
+  .container {
+    gap: 10px;
+    padding: 10px 14px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .logo img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .search-wrap {
+    order: 3;
+    width: 100%;
+  }
+
+  nav {
+    gap: 6px;
+  }
+
+  nav a {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+
+  .dropdown-btn {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+
+  .article-container {
+    margin: 16px auto;
+    padding: 12px;
+  }
+
+  .step-card {
+    padding: 14px;
+  }
+
+  .step-card h2 {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .comments-section {
+    margin: 16px auto;
+    padding: 12px;
+  }
+
+  .answer-box {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .answer-box img {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .submenu-items {
+    left: 0;
+    top: 100%;
+  }
+}
 </style>
 </head>
 <body>
 
+<header>
+  <div class="container">
+    <a class="logo" href="index.html">
+      <img src="logo.png" alt="Learnit logo">
+      Learnit
+    </a>
 
-  <header>
-    <div class="container">
-
-<a class="logo" href="index.html">
-	<img src="logo.png" alt="Learnit logo">
-	Learnit
-	</a>
-
-      <div class="search-wrap">
-        <input type="text" placeholder="Search articles..." />
-      </div>
-
-      <nav>
-       
-
-
-        <div class="dropdown">
-          <button class="dropdown-btn" >
-            Categories
-          </button>
-          <div class="dropdown-menu" id="categoryMenu">
-		  
-			<div class="submenu">
-				<a href="#">Arts and Crafts</a>
-
-			<div class="submenu-items">
-				<a href="slime.html">How to make slime</a>
-				</div>
-			</div>
-			
-			<div class="submenu">			
-            <a href="#"> Hobbies </a>
-					<div class="submenu-items">
-				<a href="basketball.html">How to pump a basketball</a>
-				</div>
-			</div>
-			
-            <a href="#"> Pets and Animals </a>
-            <a href="#"> Health and Fitness</a>
-            <a href="#"> Computer and Electronics</a>
-            <a href="#"> Education </a>
-			
-						<div class="submenu">
-            <a href="#"> Personal care </a>
-						<div class="submenu-items">
-				<a href="shoe.html">How to tie shoelaces</a>
-				</div>
-			
-			</div>
-            <a href="#"> Home and Garden </a>
-			<a href="#"> Finance and Business  </a>
-            <a href="#"> Cars and vehicles </a>
-          </div>
-        </div>
-		
-		<a href="about.html">About Us</a>
-		<a href="donation.html">Donation</a>
-      </nav>
-
+    <div class="search-wrap">
+      <input type="text" placeholder="Search articles..." />
     </div>
-  </header>
 
+    <nav>
+      <div class="dropdown">
+        <button class="dropdown-btn">Categories</button>
+        <div class="dropdown-menu">
+          <div class="submenu">
+            <a href="#">Arts and Crafts</a>
+            <div class="submenu-items">
+              <a href="slime.html">How to make slime</a>
+            </div>
+          </div>
+          <div class="submenu">
+            <a href="#">Hobbies</a>
+            <div class="submenu-items">
+              <a href="basketball.html">How to pump a basketball</a>
+            </div>
+          </div>
+          <a href="#">Pets and Animals</a>
+          <a href="#">Health and Fitness</a>
+          <a href="#">Computer and Electronics</a>
+          <a href="#">Education</a>
+          <div class="submenu">
+            <a href="#">Personal care</a>
+            <div class="submenu-items">
+              <a href="shoe.html">How to tie shoelaces</a>
+            </div>
+          </div>
+          <a href="#">Home and Garden</a>
+          <a href="#">Finance and Business</a>
+          <a href="#">Cars and vehicles</a>
+        </div>
+      </div>
+      <a href="about.html">About Us</a>
+      <a href="donation.html">Donation</a>
+    </nav>
+  </div>
+</header>
 
 <div class="article-container">
 
   <div class="step-card">
-  <h1>How to Make Slime</h1>
-  <h2>By Stephanie</h2>
-  <p>Who doesn’t love slime? It’s squishy, stretchy, and oh-so-slimy! It’s also super cheap, easy to make and, incredibly versatile and customizable. In this article, we’ll teach you a simple way to make slime at home. All you need is a sticky slime base (usually glue) and a slime activator (typically borax or contact solution). Keep reading to learn how you can make your own slime with ingredients you likely already have lying around!</p>
-</div>
+    <h1>How to Make Slime</h1>
+    <h2>By Stephanie</h2>
+    <p>Who doesn't love slime? It's squishy, stretchy, and oh-so-slimy! It's also super cheap, easy to make and, incredibly versatile and customizable. In this article, we'll teach you a simple way to make slime at home. All you need is a sticky slime base (usually glue) and a slime activator (typically borax or contact solution). Keep reading to learn how you can make your own slime with ingredients you likely already have lying around!</p>
+  </div>
 
   <div class="step-card">
-  <h2>Materials</h2>
-  <p>• Bowl</p>
-<p>• Mixing tool</p>
-<p>• Air-tight container</p>
-<p>• Glue</p>
-<p>• Contact lens solution</p>
-<p>• (Optional) Shaving cream </p>
-<p>• (Optional) Glitter/Food Colouring</p>
-</div>
+    <h2>Materials</h2>
+    <p>• Bowl</p>
+    <p>• Mixing tool</p>
+    <p>• Air-tight container</p>
+    <p>• Glue</p>
+    <p>• Contact lens solution</p>
+    <p>• (Optional) Shaving cream</p>
+    <p>• (Optional) Glitter/Food Colouring</p>
+  </div>
+
   <div class="step-card">
     <h2>Step 1:</h2>
-	  <div class="step-img">
-    <img src="slime1.gif">
-	</div>
+    <img src="slime1.gif" alt="Pouring glue into a bowl">
     <p>Pour glue into a bowl. (Can be white, clear, or coloured.)</p>
   </div>
 
   <div class="step-card">
     <h2>Step 2 (optional):</h2>
-    <img src="slime2a.gif">
-	    <img src="slime2b.gif">
-    <p>Optional: Add colour or glitter to the glue. (Use food colouring, paint, pigment powders, etc.) Then mix the glue until the colour/glitter is evenly distributed</p>
+    <img src="slime2a.gif" alt="Adding colour to glue">
+    <img src="slime2b.gif" alt="Mixing colour into glue">
+    <p>Optional: Add colour or glitter to the glue. (Use food colouring, paint, pigment powders, etc.) Then mix the glue until the colour/glitter is evenly distributed.</p>
   </div>
 
   <div class="step-card">
     <h2>Step 3 (optional):</h2>
-    <img src="slime3a.gif">
-	    <img src="slime3b.gif">
-    <p>Optional: Add shaving cream to the glue mixture to make the slime more fluffy. Mix the shaving cream in until the mixture is even</p>
+    <img src="slime3a.gif" alt="Adding shaving cream">
+    <img src="slime3b.gif" alt="Mixing shaving cream">
+    <p>Optional: Add shaving cream to the glue mixture to make the slime more fluffy. Mix the shaving cream in until the mixture is even.</p>
   </div>
-  
-    <div class="step-card">
+
+  <div class="step-card">
     <h2>Step 4:</h2>
-    <img src="slime4.gif">
-    <p>Add contact lens solution to the glue mixture. Make sure to add a few drops at a time, otherwise the slime will turn out too hard, and it will be difficult to play with</p>
+    <img src="slime4.gif" alt="Adding contact lens solution">
+    <p>Add contact lens solution to the glue mixture. Make sure to add a few drops at a time, otherwise the slime will turn out too hard, and it will be difficult to play with.</p>
   </div>
 
-      <div class="step-card">
+  <div class="step-card">
     <h2>Step 5:</h2>
-    <img src="slime5.gif">
-    <p>Mix the glue mixture until the glue starts to clump together, and it pulls away from the bowl. Then knead the slime with your hands until it’s not as sticky anymore. Add more contact lens solution or baking soda as needed</p>
+    <img src="slime5.gif" alt="Kneading the slime">
+    <p>Mix the glue mixture until the glue starts to clump together, and it pulls away from the bowl. Then knead the slime with your hands until it's not as sticky anymore. Add more contact lens solution or baking soda as needed.</p>
   </div>
-  
-      <div class="step-card">
+
+  <div class="step-card">
     <h2>Step 6:</h2>
-    <img src="ac.jpg">
-<p>Store in an air-tight container to keep it safe </p>
+    <img src="ac.jpg" alt="Airtight container">
+    <p>Store in an air-tight container to keep it safe.</p>
   </div>
 
 </div>
-</div>
-
-
-<<div class="ads ad1">
-  <a href="ad.html">
-    <img src="bmo.jpg" alt="ad">
-  </a>
-</div>
-
-<div class="ads ad2">
-  <a href="ad.html">
-    <img src="fortis.jpg" alt="ad">
-  </a>
-</div>
-<div class="ads ad3">
-  <a href="ad.html">
-    <img src="hydro.png" alt="ad">
-  </a>
-</div>
-
-<div class="ads ad4">
-  <a href="ad.html">
-    <img src="depot.jpg" alt="ad">
-  </a>
-</div>
-<div class="ads ad5">
-  <a href="ad.html">
-    <img src="port.png" alt="ad">
-  </a>
-</div>
-
 
 <div class="comments-section">
-
   <div class="step-card">
     <h1>Expert Q&amp;A</h1>
 
     <div class="question-box">
-
-      <div class="question-tag">
-        <p>Question</p>
-      </div>
-
+      <div class="question-tag"><p>Question</p></div>
       <h2>What's the best way to store slime?</h2>
-
       <div class="answer-box">
-
-        <img src="placeholder.png">
-
+        <img src="placeholder.png" alt="Community member">
         <div class="answer-text">
           <h3>Community Answer</h3>
-
-          <p>
-            Slimes tend to expand after play, so you can store any leftover portions in an airtight container, like Tupperware or a Ziploc bag. That prevents air exposure, which dries it out. Once the slime settles back to its original size after a few days, you can return the leftovers to the original jar it came it. Always keep it sealed to avoid drying out. If it does harden, a bit of vinegar can help revive it.
-          </p>
-
-<div class="vote-row">
-  <p>Helpful <b>67</b></p>
-  <p>Not Helpful <b>2</b></p>
-</div>
-          
-
+          <p>Slimes tend to expand after play, so you can store any leftover portions in an airtight container, like Tupperware or a Ziploc bag. That prevents air exposure, which dries it out. Once the slime settles back to its original size after a few days, you can return the leftovers to the original jar it came in. Always keep it sealed to avoid drying out. If it does harden, a bit of vinegar can help revive it.</p>
+          <div class="vote-row">
+            <p>Helpful <b>67</b></p>
+            <p>Not Helpful <b>2</b></p>
+          </div>
         </div>
-
       </div>
-
     </div>
 
-
-
     <div class="question-box">
-
-      <div class="question-tag">
-        <p>Question</p>
-      </div>
-
+      <div class="question-tag"><p>Question</p></div>
       <h2>Can I make slime without glue?</h2>
-
       <div class="answer-box">
-
-    <img src="placeholder.png">
-
-     <div class="answer-text">
+        <img src="placeholder.png" alt="Community member">
+        <div class="answer-text">
           <h3>Community Answer</h3>
-
-          <p>
-            That's a great question
-          </p>
-
-<div class="vote-row">
-  <p>Helpful <b>2</b></p>
-  <p>Not Helpful <b>59</b></p>
-</div>
-
+          <p>That's a great question</p>
+          <div class="vote-row">
+            <p>Helpful <b>2</b></p>
+            <p>Not Helpful <b>59</b></p>
+          </div>
         </div>
-
       </div>
-
     </div>
 
   </div>
-
 </div>
 
 <footer>
   <div class="footer-inner">
     <div>
       <h1>Company</h1>
-	  	  <a href="about.html">About</a>
+      <a href="about.html">About</a>
       <a href="#"><s>Team</s></a>
       <a href="#"><s>Social Media</s></a>
       <a href="#"><s>Your Account</s></a>
@@ -666,13 +580,12 @@ h2 {
     </div>
     <div>
       <h1>Help &amp; Support</h1>
-	  	  <a href="contact.html">Contact Support</a>
+      <a href="contact.html">Contact Support</a>
       <a href="#"><s>Report a Guide</s></a>
       <a href="#"><s>Privacy policy</s></a>
       <a href="#"><s>Terms of use</s></a>
     </div>
   </div>
-
 </footer>
 
 </body>
