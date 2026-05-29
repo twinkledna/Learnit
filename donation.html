@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Learnit </title>
-
+<title>Learnit</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
-
 <style>
 * {
   box-sizing: border-box;
@@ -16,21 +13,11 @@
 }
 
 body {
-  background: #f9f0e7;
+  background-color: #f9f0e7;
   color: #623f27;
 }
 
-
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.logo img {
-  width: 50px;
-  height: 50px;
-}
+/* ── Header ── */
 header {
   background: white;
   border-bottom: 1px solid #e0e0e0;
@@ -39,31 +26,6 @@ header {
   z-index: 100;
 }
 
-.logo {
-  font-size: 40px;
-  color: #623f27;
-  text-decoration: none;
-}
-.search-wrap {
-
-  display: flex;
-  justify-content: center;
-}
-.search-wrap input {
-  width: 100%;
-  max-width: 800px;
-  padding: 6px 10px;
-}
-nav a {
-  text-decoration: none;
-  font-size: 14px;
-  color: #333;
-  padding: 8px 10px;
-  border-radius: 6px;
-}
-nav a:hover {
-  background: #f5f5f5;
-}
 .container {
   display: flex;
   align-items: center;
@@ -72,6 +34,34 @@ nav a:hover {
   margin: 0 auto;
   padding: 10px 20px;
   gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 40px;
+  color: #623f27;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.search-wrap {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.search-wrap input {
+  width: 100%;
+  max-width: 800px;
+  padding: 6px 10px;
 }
 
 nav {
@@ -80,8 +70,16 @@ nav {
   gap: 15px;
 }
 
-.search-wrap input {
-  padding: 6px;
+nav a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background: #f5f5f5;
 }
 
 .dropdown {
@@ -92,7 +90,6 @@ nav {
 .dropdown-btn {
   background: #f5f5f5;
   border: 1px solid #dddddd;
-  font-family: inherit;
   font-size: 14px;
   color: #333;
   cursor: pointer;
@@ -113,13 +110,8 @@ nav {
   z-index: 1000;
 }
 
-
 .dropdown:hover .dropdown-menu {
   display: block;
-}
-
-.dropdown-menu a:hover {
-  background: #f5f5f5;
 }
 
 .dropdown-menu a {
@@ -131,11 +123,14 @@ nav {
   white-space: nowrap;
 }
 
-
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
 
 .submenu {
   position: relative;
 }
+
 .submenu-items {
   display: none;
   position: absolute;
@@ -146,11 +141,9 @@ nav {
   min-width: 180px;
 }
 
-
 .submenu:hover .submenu-items {
   display: block;
 }
-
 
 .submenu-items a {
   display: block;
@@ -164,90 +157,7 @@ nav {
   background: #f5f5f5;
 }
 
-.about-features {
-  display: grid;
-  gap: 15px;
-}
-
-.feature {
-  font-size: 25px;
-  font-weight: 500;
-  padding: 16px 20px;
-  background: white;
-  border-radius: 12px;
-  color: #623f27;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
-}
-
-footer {
-  background: #FFFFFF;
-  color: #FFFFFF;
-  margin-top: 48px;
-  padding: 40px 20px;
-    position: relative;
-    z-index: 9999;
-}
-
-.footer-inner {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 32px;
-}
-    footer h1 { 
-	color: #623f27; 
-	font-size: 14px; 
-	font-weight: 600;
-	margin-bottom: 12px;
-	}
-  
-  footer a { 
-  display: block; 
-  color: #623f27; 
-  font-size: 13px;
-  text-decoration: none; 
-  margin-bottom: 6px; }
-  
-footer a:hover {
-  color: #000;
-  text-decoration: underline;
-}
-	.footer-bottom {
-      max-width: 1100px;
-      margin: 24px auto 0;
-      padding-top: 20px;
-      font-size: 12px;
-      color: #81c784;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-	
-
-
-body {
-  background-color: #f9f0e7; 
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ── Donation card ── */
 .card {
   display: flex;
   max-width: 1000px;
@@ -257,7 +167,6 @@ body {
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0,0,0,0.06);
 }
-
 
 .left {
   flex: 1;
@@ -275,7 +184,6 @@ h1 {
   color: #623f27;
 }
 
-
 .section {
   margin-bottom: 20px;
 }
@@ -284,7 +192,6 @@ h3 {
   font-size: 14px;
   margin-bottom: 10px;
 }
-
 
 .row {
   display: flex;
@@ -297,7 +204,6 @@ h3 {
   gap: 10px;
 }
 
-
 .option {
   padding: 10px;
   border-radius: 8px;
@@ -305,13 +211,13 @@ h3 {
   background: white;
   color: #623f27;
   font-family: inherit;
+  cursor: pointer;
 }
 
 .option:hover {
   background: #e6d3c3;
   border-color: #623f27;
 }
-
 
 .cta {
   margin-top: 20px;
@@ -330,13 +236,12 @@ h3 {
   background: #4e321f;
 }
 
-
 .fine {
   font-size: 12px;
   margin-top: 10px;
   color: #7a5a44;
+  line-height: 1.6;
 }
-
 
 .right {
   flex: 0.8;
@@ -347,17 +252,15 @@ h3 {
   justify-content: center;
 }
 
-
-. h2 {
+.right h2 {
   font-size: 30px;
   margin-bottom: 5px;
 }
 
-.brand p {
+.right p {
   font-size: 14px;
   opacity: 0.8;
 }
-
 
 .message {
   margin-top: 30px;
@@ -365,95 +268,164 @@ h3 {
   line-height: 1.5;
 }
 
+/* ── Footer ── */
+footer {
+  background: #fff;
+  margin-top: 48px;
+  padding: 40px 20px;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+footer h1 {
+  color: #623f27;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+footer a {
+  display: block;
+  color: #623f27;
+  font-size: 13px;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+
+footer a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* ── Mobile ── */
+@media (max-width: 700px) {
+  .container {
+    gap: 10px;
+    padding: 10px 14px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .logo img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .search-wrap {
+    order: 3;
+    width: 100%;
+  }
+
+  nav {
+    gap: 6px;
+  }
+
+  nav a {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+
+  .dropdown-btn {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+
+  .card {
+    flex-direction: column;
+    margin: 20px 12px;
+  }
+
+  .left {
+    padding: 20px;
   }
 
   .right {
+    padding: 20px;
     text-align: center;
   }
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .submenu-items {
+    position: static;
+    border: none;
+    padding-left: 12px;
+    min-width: unset;
+  }
 }
 </style>
 </head>
-
 <body>
 
+<header>
+  <div class="container">
+    <a class="logo" href="index.html">
+      <img src="logo.png" alt="Learnit logo">
+      Learnit
+    </a>
 
-
-  <header>
-    <div class="container">
-
-<a class="logo" href="index.html">
-	<img src="logo.png" alt="Learnit logo">
-	Learnit
-	</a>
-
-      <div class="search-wrap">
-        <input type="text" placeholder="Search articles..." />
-      </div>
-
-      <nav>
-       
-
-
-        <div class="dropdown">
-          <button class="dropdown-btn" >
-            Categories
-          </button>
-          <div class="dropdown-menu" id="categoryMenu">
-		  
-			<div class="submenu">
-				<a href="#">Arts and Crafts</a>
-
-			<div class="submenu-items">
-				<a href="slime.html">How to make slime</a>
-				</div>
-			</div>
-			
-			<div class="submenu">			
-            <a href="#"> Hobbies </a>
-					<div class="submenu-items">
-				<a href="basketball.html">How to pump a basketball</a>
-				</div>
-			</div>
-			
-            <a href="#"> Pets and Animals </a>
-            <a href="#"> Health and Fitness</a>
-            <a href="#"> Computer and Electronics</a>
-            <a href="#"> Education </a>
-			
-						<div class="submenu">
-            <a href="#"> Personal care </a>
-						<div class="submenu-items">
-				<a href="shoe.html">How to tie shoelaces</a>
-				</div>
-			
-			</div>
-            <a href="#"> Home and Garden </a>
-			<a href="#"> Finance and Business  </a>
-            <a href="#"> Cars and vehicles </a>
-          </div>
-        </div>
-		
-		<a href="about.html">About Us</a>
-		<a href="donation.html">Donation</a>
-      </nav>
-
+    <div class="search-wrap">
+      <input type="text" placeholder="Search articles..." />
     </div>
-  </header>
+
+    <nav>
+      <div class="dropdown">
+        <button class="dropdown-btn">Categories</button>
+        <div class="dropdown-menu">
+          <div class="submenu">
+            <a href="#">Arts and Crafts</a>
+            <div class="submenu-items">
+              <a href="slime.html">How to make slime</a>
+            </div>
+          </div>
+          <div class="submenu">
+            <a href="#">Hobbies</a>
+            <div class="submenu-items">
+              <a href="basketball.html">How to pump a basketball</a>
+            </div>
+          </div>
+          <a href="#">Pets and Animals</a>
+          <a href="#">Health and Fitness</a>
+          <a href="#">Computer and Electronics</a>
+          <a href="#">Education</a>
+          <div class="submenu">
+            <a href="#">Personal care</a>
+            <div class="submenu-items">
+              <a href="shoe.html">How to tie shoelaces</a>
+            </div>
+          </div>
+          <a href="#">Home and Garden</a>
+          <a href="#">Finance and Business</a>
+          <a href="#">Cars and vehicles</a>
+        </div>
+      </div>
+      <a href="about.html">About Us</a>
+      <a href="donation.html">Donation</a>
+    </nav>
+  </div>
+</header>
 
 <div class="card">
 
-
   <div class="left">
-
     <h1>Contribute To Our Mission</h1>
-
-    <p class="subtext">
-      If Learnit has helped you, consider a small contribution to support us in helping more learners like you.
-    </p>
+    <p class="subtext">If Learnit has helped you, consider a small contribution to support us in helping more learners like you.</p>
 
     <div class="section">
       <h3>Frequency</h3>
@@ -475,36 +447,22 @@ h3 {
 
     <button class="cta">Give now</button>
 
-    <p class="fine">
-     Your contribution does not constitute a charitable donation. It will allow Learnit to continue bringing you new and up-to-date information in our pursuit of helping anyone in the world to learn how to do anything.
-
-If you have questions about making a contribution, or if you’d like to manage or pause your contributions, please reach out to us at support.
-    </p>
-
+    <p class="fine">Your contribution does not constitute a charitable donation. It will allow Learnit to continue bringing you new and up-to-date information in our pursuit of helping anyone in the world to learn how to do anything. If you have questions about making a contribution, or if you'd like to manage or pause your contributions, please reach out to us at support.</p>
   </div>
 
-
   <div class="right">
-
-
-      <h2>Learnit</h2>
-      <p>Finaly, tutorials that don't suck</p>
-
-
-    <p class="message">
-      If Learnit has helped you, please consider a small contribution to support us in helping more learners like you.
-    </p>
-
+    <h2>Learnit</h2>
+    <p>Finally, tutorials that don't suck</p>
+    <p class="message">If Learnit has helped you, please consider a small contribution to support us in helping more learners like you.</p>
   </div>
 
 </div>
-
 
 <footer>
   <div class="footer-inner">
     <div>
       <h1>Company</h1>
-	  	  <a href="about.html">About</a>
+      <a href="about.html">About</a>
       <a href="#"><s>Team</s></a>
       <a href="#"><s>Social Media</s></a>
       <a href="#"><s>Your Account</s></a>
@@ -524,7 +482,7 @@ If you have questions about making a contribution, or if you’d like to manage 
       <a href="#"><s>Terms of use</s></a>
     </div>
   </div>
-
 </footer>
+
 </body>
 </html>
