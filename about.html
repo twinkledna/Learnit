@@ -1,39 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Learnit </title>
-
+<title>Learnit</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
-
 <style>
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-* {
   font-family: 'Open Sans', sans-serif;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  background-color: #f9f0e7;
 }
 
-
-
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.logo img {
-  width: 50px;
-  height: 50px;
-}
+/* ── Header ── */
 header {
   background: white;
   border-bottom: 1px solid #e0e0e0;
@@ -42,31 +25,6 @@ header {
   z-index: 100;
 }
 
-.logo {
-  font-size: 40px;
-  color: #623f27;
-  text-decoration: none;
-}
-.search-wrap {
-
-  display: flex;
-  justify-content: center;
-}
-.search-wrap input {
-  width: 100%;
-  max-width: 800px;
-  padding: 6px;
-}
-nav a {
-  text-decoration: none;
-  font-size: 14px;
-  color: #333;
-  padding: 8px 10px;
-  border-radius: 6px;
-}
-nav a:hover {
-  background: #f5f5f5;
-}
 .container {
   display: flex;
   align-items: center;
@@ -75,6 +33,34 @@ nav a:hover {
   margin: 0 auto;
   padding: 10px 20px;
   gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 40px;
+  color: #623f27;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.search-wrap {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.search-wrap input {
+  width: 100%;
+  max-width: 800px;
+  padding: 6px 10px;
 }
 
 nav {
@@ -83,8 +69,16 @@ nav {
   gap: 15px;
 }
 
-.search-wrap input {
-  padding: 6px;
+nav a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background: #f5f5f5;
 }
 
 .dropdown {
@@ -95,7 +89,6 @@ nav {
 .dropdown-btn {
   background: #f5f5f5;
   border: 1px solid #dddddd;
-  font-family: inherit;
   font-size: 14px;
   color: #333;
   cursor: pointer;
@@ -116,11 +109,8 @@ nav {
   z-index: 1000;
 }
 
-
-
-
-.dropdown-menu a:hover {
-  background: #f5f5f5;
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 .dropdown-menu a {
@@ -132,11 +122,14 @@ nav {
   white-space: nowrap;
 }
 
-
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
 
 .submenu {
   position: relative;
 }
+
 .submenu-items {
   display: none;
   position: absolute;
@@ -147,11 +140,9 @@ nav {
   min-width: 180px;
 }
 
-
 .submenu:hover .submenu-items {
   display: block;
 }
-
 
 .submenu-items a {
   display: block;
@@ -165,96 +156,25 @@ nav {
   background: #f5f5f5;
 }
 
-.about-features {
-  display: grid;
-  gap: 15px;
-}
-
-.feature {
-  font-size: 25px;
-  font-weight: 500;
-  padding: 16px 20px;
-  background: white;
-  border-radius: 12px;
-  color: #623f27;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
-}
-
-footer {
-  background: #FFFFFF;
-  color: #FFFFFF;
-  margin-top: 48px;
-  padding: 40px 20px;
-    position: relative;
-    z-index: 9999;
-}
-
-.footer-inner {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 32px;
-}
-    footer h1 { 
-	color: #623f27; 
-	font-size: 14px; 
-	font-weight: 600;
-	margin-bottom: 12px;
-	}
-  
-  footer a { 
-  display: block; 
-  color: #623f27; 
-  font-size: 13px;
-  text-decoration: none; 
-  margin-bottom: 6px; }
-  
-footer a:hover {
-  color: #000;
-  text-decoration: underline;
-}
-	.footer-bottom {
-      max-width: 1100px;
-      margin: 24px auto 0;
-      padding-top: 20px;
-      font-size: 12px;
-      color: #81c784;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-	
-
-
-body {
-  background-color: #f9f0e7; 
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-}
-
-
+/* ── Article ── */
 .article-container {
   max-width: 800px;
   margin: 40px auto;
   padding: 30px;
   border-radius: 12px;
 }
+
 h1 {
   font-size: 32px;
   color: #623f27;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
+
 h2 {
   font-size: 18px;
   color: #623f27;
   margin-bottom: 10px;
 }
-
-
 
 .step-card {
   background: white;
@@ -263,76 +183,188 @@ h2 {
   border-radius: 12px;
 }
 
-
-.step-card h2 {
-  font-size: 18px;
-  color: #623f27;
-  margin-bottom: 10px;
-}
-
 .step-card img {
   width: 100%;
   max-width: 800px;
+  height: auto;
   border-radius: 8px;
   margin-bottom: 10px;
+  display: block;
 }
 
 .step-card p {
   font-size: 16px;
-    color: #623f27;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
-@media (max-width: 768px) {
 
+/* ── Comments ── */
+.comments-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.question-box {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.question-tag {
+  display: inline-block;
+  background: #623f27;
+  border-radius: 6px;
+  padding: 4px 10px;
+  margin-bottom: 15px;
+}
+
+.question-tag p {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.question-box h2 {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.answer-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.answer-box img {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.answer-text {
+  flex: 1;
+}
+
+.answer-text h3 {
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.answer-text p {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.vote-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.vote-row p {
+  font-size: 14px;
+  color: #777;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vote-row b {
+  background: #e5e5e5;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #666;
+}
+
+/* ── Footer ── */
+footer {
+  background: #fff;
+  margin-top: 48px;
+  padding: 40px 20px;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+footer h1 {
+  color: #623f27;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+footer a {
+  display: block;
+  color: #623f27;
+  font-size: 13px;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+
+footer a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* ── Mobile ── */
+@media (max-width: 700px) {
   .container {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
+    gap: 10px;
+    padding: 10px 14px;
   }
 
   .logo {
-    justify-content: center;
     font-size: 28px;
   }
 
   .logo img {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
   }
 
   .search-wrap {
-    width: 100%;
-  }
-
-  .search-wrap input {
+    order: 3;
     width: 100%;
   }
 
   nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
+    gap: 6px;
   }
 
-  .dropdown {
-    width: 100%;
+  nav a {
+    padding: 6px 8px;
+    font-size: 13px;
   }
 
   .dropdown-btn {
-    width: 100%;
+    padding: 6px 8px;
+    font-size: 13px;
   }
 
   .article-container {
-    margin: 20px auto;
-    padding: 10px;
+    margin: 16px auto;
+    padding: 12px;
   }
 
   .step-card {
-    padding: 15px;
+    padding: 14px;
   }
 
   h1 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   h2 {
@@ -344,116 +376,168 @@ h2 {
     line-height: 1.6;
   }
 
+  .comments-section {
+    margin: 16px auto;
+    padding: 12px;
+  }
+
+  .answer-box {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .answer-box img {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+
   .footer-inner {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .submenu-items {
+    position: static;
+    border: none;
+    padding-left: 12px;
+    min-width: unset;
   }
 }
 </style>
 </head>
 <body>
 
+<header>
+  <div class="container">
+    <a class="logo" href="index.html">
+      <img src="logo.png" alt="Learnit logo">
+      Learnit
+    </a>
 
-  <header>
-    <div class="container">
-
-<a class="logo" href="index.html">
-	<img src="logo.png" alt="Learnit logo">
-	Learnit
-	</a>
-
-      <div class="search-wrap">
-        <input type="text" placeholder="Search articles..." />
-      </div>
-
-      <nav>
-       
-
-
-<button class="dropdown-btn" onclick="toggleMenu()">
-  Categories
-</button>
-			<div class="submenu">
-				<a href="#">Arts and Crafts</a>
-
-			<div class="submenu-items">
-				<a href="slime.html">How to make slime</a>
-				</div>
-			</div>
-			
-			<div class="submenu">			
-            <a href="#"> Hobbies </a>
-					<div class="submenu-items">
-				<a href="basketball.html">How to pump a basketball</a>
-				</div>
-			</div>
-			
-            <a href="#"> Pets and Animals </a>
-            <a href="#"> Health and Fitness</a>
-            <a href="#"> Computer and Electronics</a>
-            <a href="#"> Education </a>
-			
-						<div class="submenu">
-            <a href="#"> Personal care </a>
-						<div class="submenu-items">
-				<a href="shoe.html">How to tie shoelaces</a>
-				</div>
-			
-			</div>
-            <a href="#"> Home and Garden </a>
-			<a href="#"> Finance and Business  </a>
-            <a href="#"> Cars and vehicles </a>
-          </div>
-        </div>
-		
-		<a href="about.html">About Us</a>
-		<a href="donation.html">Donation</a>
-      </nav>
-
+    <div class="search-wrap">
+      <input type="text" placeholder="Search articles..." />
     </div>
-  </header>
 
+    <nav>
+      <div class="dropdown">
+        <button class="dropdown-btn">Categories</button>
+        <div class="dropdown-menu">
+          <div class="submenu">
+            <a href="#">Arts and Crafts</a>
+            <div class="submenu-items">
+              <a href="slime.html">How to make slime</a>
+            </div>
+          </div>
+          <div class="submenu">
+            <a href="#">Hobbies</a>
+            <div class="submenu-items">
+              <a href="basketball.html">How to pump a basketball</a>
+            </div>
+          </div>
+          <a href="#">Pets and Animals</a>
+          <a href="#">Health and Fitness</a>
+          <a href="#">Computer and Electronics</a>
+          <a href="#">Education</a>
+          <div class="submenu">
+            <a href="#">Personal care</a>
+            <div class="submenu-items">
+              <a href="shoe.html">How to tie shoelaces</a>
+            </div>
+          </div>
+          <a href="#">Home and Garden</a>
+          <a href="#">Finance and Business</a>
+          <a href="#">Cars and vehicles</a>
+        </div>
+      </div>
+      <a href="about.html">About Us</a>
+      <a href="donation.html">Donation</a>
+    </nav>
+  </div>
+</header>
 
 <div class="article-container">
 
   <div class="step-card">
-  <h1>About Learnit</h1>
-</div>
-
-  <div class="step-card">
-	  <div class="step-img">
-    <img src="banner.png">
-	</div>
-<h2>Welcome to Learnit - a place where learning how to do things is just as fun as doing them! </h2>
-<p>We create step by step guides designed especially for kids, using colorful rotoscoped animations that bring every lesson to life. Whether it’s drawing a cartoon, tying your shoes, building a simple project, or trying something totally new, we believe learning should feel like an adventure—not a chore.</p>
- 
- </div>
-   <div class="step-card">
-   
-   <p>Behind every guide is a team that cares about making learning simple, safe, and exciting. Our team involves educators, artists, and subject experts to make sure each lesson is accurate, easy to follow, and appropriate for young learners.</p>
-
-<p>From the first idea to the final animation, every step is carefully crafted. Our experts break down skills into clear, manageable actions, then bring them to life through rotoscoped visuals that show exactly what to do</p>
-
-<p>We also review and update our content regularly, so kids (and parents) can trust our guides to be helpful, current, and easy to understand. Our goal is to create a space where curiosity grows, confidence builds, and learning something new always feels possible.</p>
-   
-   
-   
-   
-     </div>
-
- 
+    <h1>How to Inflate a Basketball</h1>
+    <h2>By Li</h2>
+    <p>Playing basketball with a flat ball decreases your game and stunts training. Playing basketball with too much bounce can also be damaging to the ball. For the best possible basketball, you'll need to inflate it to the proper tension and care for it. There are alternatives if you do not have a ball pump.</p>
   </div>
 
+  <div class="step-card">
+    <h2>Materials</h2>
+    <p>• Basketball</p>
+    <p>• Air Pump / Bike pump</p>
+    <p>• Ball needle</p>
+  </div>
 
+  <div class="step-card">
+    <h2>Step 1:</h2>
+    <p>Buy a decent air pump for your ball.</p>
+    <p>Pumps aren't too expensive and are easy to find.</p>
+    <p>You can even use a bike pump with the proper needle.</p>
+  </div>
 
+  <div class="step-card">
+    <h2>Step 2:</h2>
+    <p>You'll need to purchase a ball needle if your pump doesn't already have one.</p>
+  </div>
 
+  <div class="step-card">
+    <h2>Step 3:</h2>
+    <img src="bb1.gif" alt="Connecting needle to pump">
+    <p>Connect your needle to the pump.</p>
+    <p>If you're using a bike pump, close the back tab on the pump before connecting it.</p>
+  </div>
 
+  <div class="step-card">
+    <h2>Step 4:</h2>
+    <img src="bb2.gif" alt="Inserting needle into ball">
+    <p>Moisten the needle with water and insert it into the hole of the ball.</p>
+  </div>
+
+  <div class="step-card">
+    <h2>Step 5:</h2>
+    <img src="bb3-ezgif.com-crop.gif" alt="Locating the valve hole">
+    <p>The hole where you insert the needle is a small black rubber circle with a smaller hole.</p>
+  </div>
+
+  <div class="step-card">
+    <h2>Step 6:</h2>
+    <img src="bb4.gif" alt="Pumping the basketball">
+    <p>Then pump up the ball to your preferred air level.</p>
+  </div>
+
+</div>
+
+<div class="comments-section">
+  <div class="step-card">
+    <h1>Expert Q&amp;A</h1>
+
+    <div class="question-box">
+      <div class="question-tag"><p>Question</p></div>
+      <h2>What's a basketball?</h2>
+      <div class="answer-box">
+        <img src="placeholder.png" alt="Community member">
+        <div class="answer-text">
+          <h3>Community Answer</h3>
+          <p>A basketball is an inflated, spherical ball used in the team sport of the same name. It is typically made of leather, rubber, or synthetic composite materials and features a pebbled texture and bounce capabilities that allow players to dribble, pass, and shoot the ball into the opponent's elevated basket.</p>
+          <div class="vote-row">
+            <p>Helpful <b>67</b></p>
+            <p>Not Helpful <b>2</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 <footer>
   <div class="footer-inner">
     <div>
       <h1>Company</h1>
-	  	  <a href="about.html">About</a>
+      <a href="about.html">About</a>
       <a href="#"><s>Team</s></a>
       <a href="#"><s>Social Media</s></a>
       <a href="#"><s>Your Account</s></a>
@@ -467,25 +551,13 @@ h2 {
     </div>
     <div>
       <h1>Help &amp; Support</h1>
-	  	  <a href="contact.html">Contact Support</a>
+      <a href="contact.html">Contact Support</a>
       <a href="#"><s>Report a Guide</s></a>
       <a href="#"><s>Privacy policy</s></a>
       <a href="#"><s>Terms of use</s></a>
     </div>
   </div>
-
 </footer>
 
-	<script>
-function toggleMenu() {
-  const menu = document.getElementById("categoryMenu");
-
-  if (menu.style.display === "block") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "block";
-  }
-}
-</script>
 </body>
 </html>
