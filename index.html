@@ -1,32 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Learnit </title>
-
+<title>Learnit</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
-
 <style>
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+body {
+  background-color: #f9f0e7;
 }
-.logo img {
-  width: 50px;
-  height: 50px;
-}
+
+/* ── Header ── */
 header {
   background: white;
   border-bottom: 1px solid #e0e0e0;
@@ -35,26 +25,6 @@ header {
   z-index: 100;
 }
 
-.logo {
-  font-size: 40px;
-  color: #623f27;
-  text-decoration: none;
-}
-.search-wrap input {
-  width: 100%;
-  max-width: 800px;
-  padding: 6px;
-}
-nav a {
-  text-decoration: none;
-  font-size: 14px;
-  color: #333;
-  padding: 8px 10px;
-  border-radius: 6px;
-}
-nav a:hover {
-  background: #f5f5f5;
-}
 .container {
   display: flex;
   align-items: center;
@@ -63,6 +33,34 @@ nav a:hover {
   margin: 0 auto;
   padding: 10px 20px;
   gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 40px;
+  color: #623f27;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.search-wrap {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.search-wrap input {
+  width: 100%;
+  max-width: 800px;
+  padding: 6px 10px;
 }
 
 nav {
@@ -71,8 +69,16 @@ nav {
   gap: 15px;
 }
 
-.search-wrap input {
-  padding: 6px;
+nav a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background: #f5f5f5;
 }
 
 .dropdown {
@@ -83,7 +89,6 @@ nav {
 .dropdown-btn {
   background: #f5f5f5;
   border: 1px solid #dddddd;
-  font-family: inherit;
   font-size: 14px;
   color: #333;
   cursor: pointer;
@@ -104,13 +109,8 @@ nav {
   z-index: 1000;
 }
 
-
 .dropdown:hover .dropdown-menu {
   display: block;
-}
-
-.dropdown-menu a:hover {
-  background: #f5f5f5;
 }
 
 .dropdown-menu a {
@@ -122,11 +122,14 @@ nav {
   white-space: nowrap;
 }
 
-
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
 
 .submenu {
   position: relative;
 }
+
 .submenu-items {
   display: none;
   position: absolute;
@@ -137,11 +140,9 @@ nav {
   min-width: 180px;
 }
 
-
 .submenu:hover .submenu-items {
   display: block;
 }
-
 
 .submenu-items a {
   display: block;
@@ -155,12 +156,20 @@ nav {
   background: #f5f5f5;
 }
 
+/* ── Welcome ── */
 .welcome-section {
   background: #f9f0e7;
   padding: 50px 20px;
 }
-.welcome-text {
-  max-width: 550px;
+
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 40px;
 }
 
 .welcome-text h1 {
@@ -173,6 +182,7 @@ nav {
   font-size: 30px;
   margin-bottom: 20px;
 }
+
 .welcome-search {
   display: flex;
   border: 2px solid #623f27;
@@ -188,39 +198,31 @@ nav {
   outline: none;
 }
 
-
 .welcome-search button {
   background: #623f27;
   color: white;
   border: none;
   padding: 0 20px;
   cursor: pointer;
+  font-size: 14px;
+}
+
+.welcome-text .fine {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #7a5a44;
 }
 
 .welcome-image img {
   max-width: 400px;
+  width: 100%;
 }
 
-.welcome-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  max-width: 1000px;
-  margin: 0 auto;   
-  padding: 0 20px;  
-}
-
+/* ── Trending ── */
 .trending {
   max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
-}
-
-
-
-.trending-title h2 {
-  font-size: 22px;
 }
 
 .trending-title {
@@ -229,6 +231,10 @@ nav {
   margin-bottom: 15px;
   border-bottom: 3px solid #f9f0e7;
   padding-bottom: 8px;
+}
+
+.trending-title h2 {
+  font-size: 22px;
 }
 
 .cards {
@@ -243,6 +249,8 @@ nav {
   border-radius: 10px;
   background: white;
   overflow: hidden;
+  color: #000;
+  text-decoration: none;
 }
 
 .card img {
@@ -252,16 +260,12 @@ nav {
   display: block;
 }
 
-.card {
-  color: #000000;
-    text-decoration: none; 
-}
 .card-text {
   padding: 10px;
   font-size: 14px;
 }
 
-
+/* ── About ── */
 .about-section {
   background: #f9f0e7;
   padding: 50px 20px;
@@ -270,7 +274,7 @@ nav {
 .about-container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;   
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -282,14 +286,14 @@ nav {
   padding: 50px 20px;
 }
 
-.about-text p {
-  font-size: 18px;
+.about-text h1 {
+  font-size: 50px;
   color: #623f27;
   margin-bottom: 15px;
 }
 
-.about-text h1 {
-  font-size: 50px;
+.about-text p {
+  font-size: 18px;
   color: #623f27;
   margin-bottom: 15px;
 }
@@ -309,9 +313,9 @@ nav {
   box-shadow: 0 6px 15px rgba(0,0,0,0.06);
 }
 
+/* ── Footer ── */
 footer {
   background: #f9f0e7;
-  color: #623f27;
   margin-top: 48px;
   padding: 40px 20px;
 }
@@ -320,193 +324,244 @@ footer {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
-
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 32px;
 }
-    footer h1 { 
-	color: #623f27; 
-	font-size: 14px; 
-	font-weight: 600;
-	margin-bottom: 12px;
-	}
-  
-  footer a { 
-  display: block; 
-  color: #623f27; 
+
+footer h1 {
+  color: #623f27;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+footer a {
+  display: block;
+  color: #623f27;
   font-size: 13px;
-  text-decoration: none; 
-  margin-bottom: 6px; }
-  
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+
 footer a:hover {
   color: #000;
   text-decoration: underline;
 }
-	.footer-bottom {
-      max-width: 1100px;
-      margin: 24px auto 0;
-      padding-top: 20px;
-      font-size: 12px;
-      color: #81c784;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-.welcome-text .fine {
-  font-size: 12px;
-  margin-top: 10px;
-  color: #7a5a44;
+
+/* ── Mobile ── */
+@media (max-width: 700px) {
+  .container {
+    gap: 10px;
+    padding: 10px 14px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .logo img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .search-wrap {
+    order: 3;
+    width: 100%;
+  }
+
+  nav {
+    gap: 6px;
+  }
+
+  nav a {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+
+  .dropdown-btn {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+
+  .welcome-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 0 10px;
+  }
+
+  .welcome-text h1 {
+    font-size: 32px;
+  }
+
+  .welcome-text p {
+    font-size: 20px;
+  }
+
+  .welcome-image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .welcome-image img {
+    max-width: 220px;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    padding: 0 10px;
+    gap: 24px;
+  }
+
+  .about-text {
+    padding: 20px 0;
+  }
+
+  .about-text h1 {
+    font-size: 32px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+  }
+
+  .feature {
+    font-size: 18px;
+    padding: 12px 16px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .submenu-items {
+    left: 0;
+    top: 100%;
+  }
 }
 </style>
 </head>
 <body>
 
+<header>
+  <div class="container">
+    <a class="logo" href="#">
+      <img src="logo.png" alt="Learnit logo">
+      Learnit
+    </a>
 
-  <header>
-    <div class="container">
-
-	<a class="logo" href="#">
-	<img src="logo.png" alt="Learnit logo">
-	Learnit
-	</a>
-
-      <div class="search-wrap">
-        <input type="text" placeholder="Search articles..." />
-      </div>
-
-      <nav>
-       
-
-        <div class="dropdown">
-          <button class="dropdown-btn" >
-            Categories
-          </button>
-          <div class="dropdown-menu" id="categoryMenu">
-		  
-			<div class="submenu">
-				<a href="#">Arts and Crafts</a>
-
-			<div class="submenu-items">
-				<a href="slime.html">How to make slime</a>
-				</div>
-			</div>
-			
-			<div class="submenu">			
-            <a href="#"> Hobbies </a>
-					<div class="submenu-items">
-				<a href="basketball.html">How to pump a basketball</a>
-				</div>
-			</div>
-			
-            <a href="#"> Pets and Animals </a>
-            <a href="#"> Health and Fitness</a>
-            <a href="#"> Computer and Electronics</a>
-            <a href="#"> Education </a>
-			
-						<div class="submenu">
-            <a href="#"> Personal care </a>
-						<div class="submenu-items">
-				<a href="shoe.html">How to tie shoelaces</a>
-				</div>
-			
-			</div>
-            <a href="#"> Home and Garden </a>
-			<a href="#"> Finance and Business  </a>
-            <a href="#"> Cars and vehicles </a>
-          </div>
-        </div>
-		
-		<a href="about.html">About Us</a>
-		<a href="donation.html">Donation</a>
-      </nav>
-
+    <div class="search-wrap">
+      <input type="text" placeholder="Search articles..." />
     </div>
-  </header>
+
+    <nav>
+      <div class="dropdown">
+        <button class="dropdown-btn">Categories</button>
+        <div class="dropdown-menu">
+          <div class="submenu">
+            <a href="#">Arts and Crafts</a>
+            <div class="submenu-items">
+              <a href="slime.html">How to make slime</a>
+            </div>
+          </div>
+          <div class="submenu">
+            <a href="#">Hobbies</a>
+            <div class="submenu-items">
+              <a href="basketball.html">How to pump a basketball</a>
+            </div>
+          </div>
+          <a href="#">Pets and Animals</a>
+          <a href="#">Health and Fitness</a>
+          <a href="#">Computer and Electronics</a>
+          <a href="#">Education</a>
+          <div class="submenu">
+            <a href="#">Personal care</a>
+            <div class="submenu-items">
+              <a href="shoe.html">How to tie shoelaces</a>
+            </div>
+          </div>
+          <a href="#">Home and Garden</a>
+          <a href="#">Finance and Business</a>
+          <a href="#">Cars and vehicles</a>
+        </div>
+      </div>
+      <a href="about.html">About Us</a>
+      <a href="donation.html">Donation</a>
+    </nav>
+  </div>
+</header>
 
 <div class="welcome-section">
   <div class="welcome-container">
-    
     <div class="welcome-text">
       <h1>Welcome to Learnit</h1>
-      <p>Finally, tutorials that don’t suck</p>
-
+      <p>Finally, tutorials that don't suck</p>
       <div class="welcome-search">
-		  <input type="text" placeholder="What will you learn today? " />
+        <input type="text" placeholder="What will you learn today?" />
         <button>Search</button>
       </div>
-	  
-	  
-	   <p class="fine">
-     This search bar does not work, you can find all our articles in the "Trending " section
-    </p>
+      <p class="fine">This search bar does not work, you can find all our articles in the "Trending" section</p>
     </div>
-
     <div class="welcome-image">
-      <img src="logo.png" alt="Logo">
-	</div>
+      <img src="logo.png" alt="Learnit logo">
+    </div>
   </div>
-	</div>
+</div>
 
-  
-  <div class="trending">
+<div class="trending">
   <div class="trending-title">
     <h2>Trending Now</h2>
   </div>
-
   <div class="cards">
-
-<a href="slime.html" class="card">
-  <img src="slime.png">
-  <div class="card-text">
-    How to Make Slime
+    <a href="slime.html" class="card">
+      <img src="slime.png" alt="How to make slime">
+      <div class="card-text">How to Make Slime</div>
+    </a>
+    <a href="basketball.html" class="card">
+      <img src="basketball.jpg" alt="How to pump a basketball">
+      <div class="card-text">How to Pump a Basketball</div>
+    </a>
+    <a href="shoe.html" class="card">
+      <img src="shoe.webp" alt="How to tie shoelaces">
+      <div class="card-text">How to Tie Shoelaces</div>
+    </a>
   </div>
-</a>
-
-<a href="basketball.html" class="card">
-  <img src="basketball.jpg">
-  <div class="card-text">
-How to Pump a Basketball
-  </div>
-</a>
-
-<a href="shoe.html" class="card">
-  <img src="shoe.webp">
-  <div class="card-text">
-How to tie shoelaces
-  </div>
-  </a>
-</div> 
-
-</div> 
-
-
+</div>
 
 <div class="about-section">
   <div class="about-container">
-   
-	    <div class="about-text">
-	 <h1>About Us</h1>
-      <p>Learnit is an educational content platform focused on providing simple step-bystep "How-to" guides for people</p>
-	  <p>Users can upload suggestions for guides for this website. Moderators will review the guides for safety, accuracy, and age appropriateness </p>
+    <div class="about-text">
+      <h1>About Us</h1>
+      <p>Learnit is an educational content platform focused on providing simple step-by-step "How-to" guides for people.</p>
+      <p>Users can upload suggestions for guides for this website. Moderators will review the guides for safety, accuracy, and age appropriateness.</p>
     </div>
-
-	<div class="about-features">
-	<div class="feature">📚 3+ Guides </div>
-	<div class="feature">🎨 Hand rotoscoped </div>
-	<div class="feature">🛡️ All safe and appropriate</div>
-</div>
+    <div class="about-features">
+      <div class="feature">📚 3+ Guides</div>
+      <div class="feature">🎨 Hand rotoscoped</div>
+      <div class="feature">🛡️ All safe and appropriate</div>
+    </div>
   </div>
-	</div>
-
-
+</div>
 
 <footer>
   <div class="footer-inner">
     <div>
       <h1>Company</h1>
-	  	  <a href="about.html">About</a>
+      <a href="about.html">About</a>
       <a href="#"><s>Team</s></a>
       <a href="#"><s>Social Media</s></a>
       <a href="#"><s>Your Account</s></a>
@@ -520,18 +575,13 @@ How to tie shoelaces
     </div>
     <div>
       <h1>Help &amp; Support</h1>
-	  	  <a href="contact.html">Contact Support</a>
+      <a href="contact.html">Contact Support</a>
       <a href="#"><s>Report a Guide</s></a>
       <a href="#"><s>Privacy policy</s></a>
       <a href="#"><s>Terms of use</s></a>
     </div>
   </div>
-
 </footer>
- 
 
 </body>
-
-
-
 </html>
