@@ -219,10 +219,14 @@ nav a:hover {
 }
 
 /* ── Trending ── */
+.trending-section {
+  background: white;
+  padding: 40px 20px;
+}
+
 .trending {
   max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
+  margin: 0 auto;
 }
 
 .trending-title {
@@ -449,10 +453,8 @@ footer a:hover {
   }
 
   .submenu-items {
-    position: static;
-    border: none;
-    padding-left: 12px;
-    min-width: unset;
+    left: 0;
+    top: 100%;
   }
 }
 </style>
@@ -524,23 +526,25 @@ footer a:hover {
   </div>
 </div>
 
-<div class="trending">
-  <div class="trending-title">
-    <h2>Trending Now</h2>
-  </div>
-  <div class="cards">
-    <a href="slime.html" class="card">
-      <img src="slime.png" alt="How to make slime">
-      <div class="card-text">How to Make Slime</div>
-    </a>
-    <a href="basketball.html" class="card">
-      <img src="basketball.jpg" alt="How to pump a basketball">
-      <div class="card-text">How to Pump a Basketball</div>
-    </a>
-    <a href="shoe.html" class="card">
-      <img src="shoe.webp" alt="How to tie shoelaces">
-      <div class="card-text">How to Tie Shoelaces</div>
-    </a>
+<div class="trending-section">
+  <div class="trending">
+    <div class="trending-title">
+      <h2>Trending Now</h2>
+    </div>
+    <div class="cards">
+      <a href="slime.html" class="card">
+        <img src="slime.png" alt="How to make slime">
+        <div class="card-text">How to Make Slime</div>
+      </a>
+      <a href="basketball.html" class="card">
+        <img src="basketball.jpg" alt="How to pump a basketball">
+        <div class="card-text">How to Pump a Basketball</div>
+      </a>
+      <a href="shoe.html" class="card">
+        <img src="shoe.webp" alt="How to tie shoelaces">
+        <div class="card-text">How to Tie Shoelaces</div>
+      </a>
+    </div>
   </div>
 </div>
 
